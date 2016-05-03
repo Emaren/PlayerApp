@@ -27,6 +27,10 @@ class PlayersController < ApplicationController
     @player = Player.find params[:id]
   end
 
+  def edit
+    @player = Player.find params[:id]
+  end
+
   # Update a player's info
   def update
     @player = Player.find params[:id]

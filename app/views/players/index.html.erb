@@ -12,6 +12,7 @@
     <td><%= player.age %></td>
     <td><%= player.team %></td>
     <td><%= link_to "view", player_path(player) %></td>
+    <td><%= link_to "edit", player_path(player) %></td>
     <td><%= link_to "destroy", player_path(player), method: :delete, data: {confirm: "Confirm Deletion?"} %></td>
   </tr>
   <% end %>
