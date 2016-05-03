@@ -1,0 +1,8 @@
+<!-- Step 2) Create Player Form -->
+
+<%= simple_form_for @player do |f| %>
+  <%= f.input :name, label: "Name" %>
+  <%= f.input :age, label: "Age" %>
+  <%= f.input :team, label: "Sports Team" %>
+  <%= f.button :submit, "Create Player" %>
+<% end %>
