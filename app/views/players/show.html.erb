@@ -1,2 +1,9 @@
-<h1>Players#show</h1>
-<p>Find me in app/views/players/show.html.erb</p>
+<h3><%= @player.name %></h3>
+<p><%= @player.age %></p>
+<p><%= @player.team %></p>
+
+<br><br>
+
+  <%= link_to "Back", root_path %>
+  <%= link_to "Edit", edit_player_path(@player) %>
+  <%= link_to "Delete", player_path(@player), method: :delete, data: {confirm: "Confirm Deletion?"} %>

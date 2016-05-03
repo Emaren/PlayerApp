@@ -1,2 +1,22 @@
-<h1>Players#index</h1>
-<p>Find me in app/views/players/index.html.erb</p>
+<h1>Players Table</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Team</th>
+  </tr>
+  <% @players.each do |player| %>
+  <tr>
+    <td><%= player.name %></td>
+    <td><%= player.age %></td>
+    <td><%= player.team %></td>
+    <td><%= link_to "view", player_path(player) %></td>
+    <td><%= link_to "destroy", player_path(player), method: :delete, data: {confirm: "Confirm Deletion?"} %></td>
+  </tr>
+  <% end %>
+</table>
+
+<br><br>
+
+<p><%= link_to "Create Player", new_player_path %></p>

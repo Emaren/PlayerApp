@@ -19,7 +19,7 @@ class PlayersController < ApplicationController
 
   # Index all Player
   def index
-    @players = Play.all
+    @players = Player.all
   end
 
   # Display each player
@@ -40,8 +40,8 @@ class PlayersController < ApplicationController
 
   # Delete player record from the DB.
   def destroy
-    @player = player.find params[:id]
-    @player.destory
+    @player = Player.find params[:id]
+    @player.destroy
     redirect_to players_path
   end
 
