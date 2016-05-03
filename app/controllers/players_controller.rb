@@ -19,7 +19,8 @@ class PlayersController < ApplicationController
 
   # Index all Player
   def index
-    @players = Player.all
+    # @players = Player.all
+    @players = Player.search(params[:search])
   end
 
   # Display each player

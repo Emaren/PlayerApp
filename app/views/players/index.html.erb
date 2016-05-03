@@ -20,4 +20,13 @@
 
 <br><br>
 
+<%= form_tag players_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :team => nil %>
+  </p>
+<% end %>
+
+<br><br>
+
 <p><%= link_to "Create Player", new_player_path %></p>
